@@ -34,16 +34,17 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'newsbook' ); ?></p>
+			<p><?php esc_html_e( 'It looks loke nothing matched your search terms. Please try again with some different keywords.', 'newsbook' ); ?></p>
+			<img src="https://www.football.guru/wp-content/uploads/2021/01/american-football-155961_640.png" style="width=100%;margin-bottom:20px;"/>
 			<?php
-			get_search_form();
 
 		else :
 			?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'newsbook' ); ?></p>
+			<img src="https://www.football.guru/wp-content/uploads/2021/01/american-football-155961_640.png" style="width=100%;margin-bottom:20px;"/>
 			<?php
-			get_search_form();
+			
 
 		endif;
 		?>

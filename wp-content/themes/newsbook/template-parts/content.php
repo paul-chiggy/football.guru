@@ -15,7 +15,7 @@
 
 	<div class="nb-card-content">
 
-		<?php newsbook_cats_list(); ?>
+		
 
 		<header class="entry-header">
 			<?php
@@ -30,7 +30,8 @@
 				<div class="entry-meta">
 					<?php
 					newsbook_posted_on();
-					newsbook_posted_by();
+					// newsbook_posted_by();
+					newsbook_cats_list();
 					newsbook_comments_link();
 					?>
 				</div><!-- .entry-meta -->

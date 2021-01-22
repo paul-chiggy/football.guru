@@ -18,15 +18,14 @@ get_header();
 
 					<section class="error-404 not-found">
 						<header class="page-header">
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'newsbook' ); ?></h1>
+							<h1 class="page-title"><?php esc_html_e( 'Nothing was found at this location.', 'newsbook' ); ?></h1>
 						</header><!-- .page-header -->
 
 						<div class="page-content">
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'newsbook' ); ?></p>
+							<p><?php esc_html_e( 'Maybe try one of the links below or a search?', 'newsbook' ); ?></p>
+							<img src="https://www.football.guru/wp-content/uploads/2021/01/american-football-155961_640.png" style="width=100%;margin-bottom:20px;"/>
 
 								<?php
-								get_search_form();
-
 								the_widget( 'WP_Widget_Recent_Posts' );
 								?>
 
@@ -46,14 +45,6 @@ get_header();
 										?>
 									</ul>
 								</div><!-- .widget -->
-
-								<?php
-								/* translators: %1$s: smiley */
-								$newsbook_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'newsbook' ), convert_smilies( ':)' ) ) . '</p>';
-								the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$newsbook_archive_content" );
-
-								the_widget( 'WP_Widget_Tag_Cloud' );
-								?>
 
 						</div><!-- .page-content -->
 					</section><!-- .error-404 -->

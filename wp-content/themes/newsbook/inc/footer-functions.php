@@ -13,6 +13,17 @@
 function newsbook_display_main_footer_design_1() {
 	?>
 	<div class="container">
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'newsbook' ); ?></button>
+			<?php
+	wp_nav_menu(
+		array(
+			'theme_location' => 'footer-menu',
+			'menu_id'        => 'footer-menu',
+		)
+	);
+			?>
+		</nav>
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<div class="site-info">

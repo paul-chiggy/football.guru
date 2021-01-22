@@ -183,3 +183,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function wpb_custom_new_menu() {
+  register_nav_menu('users-menu',__( 'Users Menu' ));
+}
+add_action( 'init', 'wpb_custom_new_menu' );
+
+function wpb_custom_new_menu_2() {
+  register_nav_menu('footer-menu',__( 'Footer Menu' ));
+}
+add_action( 'init', 'wpb_custom_new_menu_2' );
+

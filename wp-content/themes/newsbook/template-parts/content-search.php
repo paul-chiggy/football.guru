@@ -14,8 +14,6 @@
 	<?php newsbook_post_thumbnail(); ?>
 
 	<div class="nb-card-content">
-
-		<?php newsbook_cats_list(); ?>
 		
 		<header class="entry-header">
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
@@ -24,7 +22,8 @@
 			<div class="entry-meta">
 				<?php
 				newsbook_posted_on();
-				newsbook_posted_by();
+				// newsbook_posted_by();
+				newsbook_cats_list();
 				?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>

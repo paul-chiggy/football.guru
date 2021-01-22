@@ -14,8 +14,6 @@
 	<div class="nb-card-content">
 		<header class="entry-header">
 			<?php
-
-			newsbook_cats_list();
 				
 			the_title( '<h1 class="entry-title">', '</h1>' );
 
@@ -25,6 +23,7 @@
 					<?php
 					newsbook_posted_on();
 					newsbook_posted_by();
+					newsbook_cats_list();
 					?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>

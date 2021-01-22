@@ -56,8 +56,7 @@ if ( ! function_exists( 'newsbook_display_banner_section' ) ) :
 													</h3>
 													<div class="theme-banner-meta">
 													<?php
-														newsbook_posted_on();
-														newsbook_posted_by();
+														the_excerpt();
 													?>
 													</div>
 												</div>
@@ -82,8 +81,7 @@ if ( ! function_exists( 'newsbook_display_banner_section' ) ) :
 													</h3>
 													<div class="theme-banner-meta">
 													<?php
-														newsbook_posted_on();
-														newsbook_posted_by();
+														the_excerpt();
 													?>
 													</div>
 												</div>

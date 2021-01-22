@@ -18,15 +18,108 @@
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 413px) {
+	.site-header, .header-right-widgets {
+    	text-align: center!important;
+	}
+}
+
+@media (max-width: 767px) {
+	.nb-banner-grid {
+		display: none!important;
+	}
+	#main-content {
+		margin-top: 60px!important;
+	}
+	.menu-search {
+		width: 100%!important;
+		float: none!important;
+		margin-top: 5px!important;
+		display: block!important;
+	}
+	.menu-search form {
+		margin-left: 0!important;
+	}
+	.header-right-widgets .widget a {
+		font-size: 14px;
+	}
+	.main-navigation a {
+		font-size: 15px;
+	}
+	#footr-menu a {
+		font-size: 13px;
+	}
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+	.byline {
+		display: none!important;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+	.row-cols-sm-2 > * {
+		width: 100%!important;
+	}
+	.entry-title {
+		font-size: 1.1rem;
+	}
+	.entry-summary p {
+		font-size: .9rem;
+	}
+	.byline {
+		display: inline-block!important;
+	}
+	.theme-banner-meta {
+		display: none;
+	}
+	.nb-banner-grid .nb-banner-primary-post img,
+	.nb-banner-grid .nb-banner-primary-post,
+	.nb-banner-grid .nb-banner-secondary-post img,
+	.nb-banner-grid .nb-banner-secondary-post {
+  		height: auto!important;
+	}
+	.nb-banner-grid .nb-banner-primary-post .theme-banner-title a {
+		font-size: 1.1rem!important;
+	}
+	.nb-banner-grid .nb-banner-secondary-post .theme-banner-title a {
+		font-size: .8rem!important;
+	}
+	.nb-banner-grid .nb-banner-primary-post .theme-banner-content {
+		padding: 5px 5px 10px 10px!important;
+	}
+	.nb-banner-grid .nb-banner-secondary-post .theme-banner-content {
+		padding: 5px 5px 0 10px!important;
+	}
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
   .container, .container-sm {
     max-width: 540px;
   }
+  .header-right-widgets {
+    float: right;
+    width: max-content;
+    margin-top: -55px;
+  }
+  .entry-title {
+    font-size: 1.1rem;
+  }
+  .entry-summary p {
+    font-size: .9rem;
+  }
+  .byline {
+    display: none!important;
+  }
+
 }
 
 @media (min-width: 768px) {
   .container, .container-sm, .container-md {
     max-width: 720px;
+  }
+  .header-right-widgets {
+    margin-top: 0;
   }
 }
 

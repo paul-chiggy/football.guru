@@ -21,6 +21,9 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
+	<p id="login-message">
+		You have to be logged in to be able to post comments or reply to someone's feedback.
+	</p>
 
 	<?php
 	// You can start editing here -- including this comment!
@@ -32,13 +35,13 @@ if ( post_password_required() ) {
 			if ( '1' === $newsbook_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'newsbook' ),
+					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'newsbook' ),
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf( 
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $newsbook_comment_count, 'comments title', 'newsbook' ) ),
+					esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $newsbook_comment_count, 'comments title', 'newsbook' ) ),
 					number_format_i18n( $newsbook_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
@@ -70,8 +73,11 @@ if ( post_password_required() ) {
 		endif;
 
 	endif; // Check for have_comments().
-
-	comment_form();
-	?>
+			?>
+	<div id="comments-form">	
+		<?php
+		comment_form();
+		?>
+	</div>
 
 </div><!-- #comments -->
