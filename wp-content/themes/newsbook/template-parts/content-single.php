@@ -19,13 +19,6 @@
 
 			if ( 'post' === get_post_type() ) :
 				?>
-				<div class="entry-meta">
-					<?php
-					newsbook_posted_on();
-					newsbook_posted_by();
-					newsbook_cats_list();
-					?>
-				</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 
@@ -56,8 +49,15 @@
 			);
 			?>
 		</div><!-- .entry-content -->
-
 		<div class="clearfix"></div>
 	</div>
+	<div class="entry-meta">
+		<?php
+		newsbook_posted_on();
+		newsbook_posted_by();
+		newsbook_cats_list();
+		?>
+	</div><!-- .entry-meta -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
+

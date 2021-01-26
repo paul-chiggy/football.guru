@@ -15,9 +15,17 @@
 
 	<div class="nb-card-content">
 
-		
-
 		<header class="entry-header">
+						
+			<div class="entry-meta">
+				<?php
+				newsbook_posted_on();
+				// newsbook_posted_by();
+				newsbook_cats_list();
+				newsbook_comments_link();
+				?>
+			</div><!-- .entry-meta -->
+			
 			<?php
 			if ( is_singular() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -27,14 +35,7 @@
 	
 			if ( 'post' === get_post_type() ) :
 				?>
-				<div class="entry-meta">
-					<?php
-					newsbook_posted_on();
-					// newsbook_posted_by();
-					newsbook_cats_list();
-					newsbook_comments_link();
-					?>
-				</div><!-- .entry-meta -->
+				<!-- here was entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 	

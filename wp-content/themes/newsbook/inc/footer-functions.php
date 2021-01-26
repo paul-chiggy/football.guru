@@ -28,12 +28,7 @@ function newsbook_display_main_footer_design_1() {
 			<div class="col-md-12 text-center">
 				<div class="site-info">
 					<span>
-						<?php esc_html_e( 'Supported by: ', 'pavlo.nl' ); ?>
-						<a href="<?php echo esc_url( __( 'https://pavlo.nl/', 'pavlo.nl' ) ); ?>" target="_blank"><?php esc_html_e( 'pavlo.nl', 'pavlo.nl' ); ?></a>
-					</span>
-					<span class="sep"> | </span>
-					<span>
-						<?php esc_html_e( 'Pavlo Chigishev © 2021', 'newsbook' ); ?>
+						<?php esc_html_e( 'Football Guru © 2021', 'newsbook' ); ?>
 					</span>
 				</div><!-- .site-info -->
 			</div>

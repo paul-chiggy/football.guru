@@ -192,4 +192,3 @@ function wpb_custom_new_menu_2() {
   register_nav_menu('footer-menu',__( 'Footer Menu' ));
 }
 add_action( 'init', 'wpb_custom_new_menu_2' );
-

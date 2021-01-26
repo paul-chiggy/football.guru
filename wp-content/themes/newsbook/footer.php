@@ -33,5 +33,17 @@
 
 <?php wp_footer(); ?>
 
+
+	
+<!-- adblocker detector -->
+<script src="/scripts/adblocker.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+	if(!document.getElementById('FGaam')) {
+		document.getElementById('FGaamm').style.display='block';
+	}
+
+</script><!-- adblocker detector -->
+
 </body>
 </html>
