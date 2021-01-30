@@ -192,3 +192,76 @@ function wpb_custom_new_menu_2() {
   register_nav_menu('footer-menu',__( 'Footer Menu' ));
 }
 add_action( 'init', 'wpb_custom_new_menu_2' );
+
+add_action( 'pre_get_posts', function ( $q )
+{
+    if(    !is_admin() // Only target the front end
+        && $q->is_main_query() // Only target the main query
+        && $q->is_search() // Only target the search page
+    ) {
+        // Get the search terms
+        $search_terms = $q->get( 's' );
+
+        // Set a 404 if s is empty
+        if ( !$search_terms ) {
+            add_action( 'wp', function () use ( $q )
+            {
+                $q->set_404();
+                status_header(404);
+                nocache_headers();
+            });
+        }
+    }
+});
+
+if ( function_exists('register_sidebar') ) {
+
+   register_sidebar(array(
+	   'name' => 'sidebar-2',
+	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	   'after_widget' => '</div>',
+	   'before_title' => '<h2>',
+	   'after_title' => '</h2>'
+    ));
+
+   register_sidebar(array(
+	   'name' => 'sidebar-5',
+	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	   'after_widget' => '</div>',
+	   'before_title' => '<h2>',
+	   'after_title' => '</h2>'
+   ));
+	
+   register_sidebar(array(
+	   'name' => 'sidebar-8',
+	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	   'after_widget' => '</div>',
+	   'before_title' => '<h2>',
+	   'after_title' => '</h2>'
+    ));
+
+   register_sidebar(array(
+	   'name' => 'sidebar-10',
+	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	   'after_widget' => '</div>',
+	   'before_title' => '<h2>',
+	   'after_title' => '</h2>'
+   ));
+	
+   register_sidebar(array(
+	   'name' => 'sidebar-19',
+	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	   'after_widget' => '</div>',
+	   'before_title' => '<h2>',
+	   'after_title' => '</h2>'
+    ));
+
+   register_sidebar(array(
+	   'name' => 'sidebar-20',
+	   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	   'after_widget' => '</div>',
+	   'before_title' => '<h2>',
+	   'after_title' => '</h2>'
+   ));
+
+}

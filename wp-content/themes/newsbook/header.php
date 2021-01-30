@@ -13,6 +13,14 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+	
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<?php wp_head(); ?>	
+	
+	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5S0EKGT9CG"></script>
 	<script>
@@ -22,11 +30,11 @@
 
 	  gtag('config', 'G-5S0EKGT9CG');
 	</script><!-- GA4 tag end -->
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-
-	<?php wp_head(); ?>	
+	
+	<!-- Google AdSense tag starts here -->
+	<script data-ad-client="ca-pub-1864017360612985" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Google AdSense tag ends here -->
+	
 </head>
 
 <body <?php body_class(); ?>>

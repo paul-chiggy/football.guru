@@ -52,11 +52,20 @@
 	#footr-menu a {
 		font-size: 13px;
 	}
+	.byline {
+		display: none!important;
+	}
+}
+@media (max-width: 999px) {
+	/* custom */
+	.nb-post-with-content .entry-title {
+		font-size: 1.1rem!important;
+	}
 }
 
 @media (min-width: 1000px) and (max-width: 1199px) {
 	.byline {
-		display: none!important;
+		display: inline-block!important;
 	}
 }
 
@@ -139,10 +148,6 @@
   .entry-summary p {
     font-size: .9rem;
   }
-  .byline {
-    display: none!important;
-  }
-
 }
 
 @media (min-width: 768px) {

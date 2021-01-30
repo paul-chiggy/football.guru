@@ -1356,8 +1356,8 @@ button:hover,
 .nb-posts-row a.post-thumbnail {
   display: block;
 }
-.nb-posts-row a.post-thumbnail:hover {
-  opacity: 0.7;
+.nb-posts-row article.nb-post-with-excerpt:hover img {
+	opacity: 0.7;
 }
 .nb-posts-row a.post-thumbnail img {
   border-radius: 0.25rem;
@@ -1397,9 +1397,10 @@ button:hover,
 }
 .nb-card-content .entry-meta {
 	position: absolute;
-	top: -70px;
+	top: -65px;
 	width: 100%;
 }
+.nb-post-with-content .entry-meta a,
 .nb-card-content .entry-meta a {
 	font-size: 13px;
   font-weight: 500;
@@ -1407,10 +1408,14 @@ button:hover,
   text-decoration: none;
   text-transform: uppercase;
 }
-.entry-meta .comments-link,
-.entry-meta .byline {
+.nb-post-with-content .entry-meta .posted-on,
+.nb-post-with-content .entry-meta .comments-link,
+.nb-post-with-content .entry-meta .byline {
   display: inline-block;
   margin-right: 1rem;
+}
+.nb-post-with-content .entry-meta .posted-on {
+	margin-left: 2rem;
 }
 .entry-meta .posted-on svg,
 .entry-meta .comments-link svg,
@@ -1418,12 +1423,16 @@ button:hover,
   margin-right: 0.25rem;
   padding-top: 2px;
 }
+
+.nb-post-with-content .entry-meta .posted-on,
+.nb-post-with-content .entry-meta .cat-links,
+.nb-post-with-content .entry-meta .byline,
 .nb-card-content .entry-meta .posted-on,
 .nb-card-content .entry-meta .cat-links {
   display: inline-block;
   color: #1a202c;
   background-color: #edf0f9;
-  padding: 5px;
+  padding: 2px 5px;
   margin-bottom: 10px;
   border-radius: 7px;
 }
@@ -1431,6 +1440,12 @@ button:hover,
   float: right;
   margin-left: 10px;
 }
+.nb-post-with-content .entry-meta .posted-on:hover > a,
+.nb-post-with-content .entry-meta .posted-on:hover,
+.nb-post-with-content .entry-meta .cat-links:hover > a,
+.nb-post-with-content .entry-meta .cat-links:hover,
+.nb-post-with-content .entry-meta .byline:hover > span > a,
+.nb-post-with-content .entry-meta .byline:hover,
 .nb-card-content .entry-meta .cat-links:hover > a,
 .nb-card-content .entry-meta .cat-links:hover,
 .nb-card-content .entry-meta .posted-on:hover > a,

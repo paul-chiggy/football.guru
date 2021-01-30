@@ -16,7 +16,7 @@ get_header();
 			<div class="col-md-8 content-area">
 				<main id="primary" class="site-main">
 
-					<?php if ( have_posts() ) : ?>
+					<?php if ( have_posts()  && $_GET['s'] != '' ) : ?>
 
 						<header class="page-header">
 							<h1 class="page-title">
